@@ -1,7 +1,5 @@
 <?php
-
 /**
- * @wordpress-plugin
  * Plugin Name:       Sort Stock WooCommerce
  * Plugin URI:        https://github.com/byanofsky/wc-sort-by-stock
  * Description:       Sort your products according to the amount you have in your stock.
@@ -15,38 +13,31 @@
 
 /** Die
 */
-
 defined( 'ABSPATH' ) or die( 'Do not cheat!' );
-
 /**
 * Make stock column sortable
 */
 add_filter( 'manage_edit-product_columns', 'sort_stock_woo' );
 function sort_stock_woo( $sortable_columns ) {
-   $sortable_columns[ 'is_in_stock' ] = '_stock';
+   $sortable_columns[ 'is_in_stock' ] = 'Estoque Status';
    return $sortable_columns;
-
 }
-
 /**
 * Adjust the order of the posts as they are output on the backend
 */
 add_filter( 'posts_clauses', 'manage_wp_posts_clauses', 1, 2 );
 function manage_wp_posts_clauses( $stock_order, $query ) {
   global $wpdb;
-
   /** 
   * Set variable for what is specified to orderby
   */ 
   $orderby = $query->get( 'orderby' );
-
   /**
   * Check for main query and if orderby is specified
   */
-  if ( $query->is_main_query() && ( $query->get( 'orderby' ) == '_stock' ) ) {
+  if ( $query->is_main_query() && ( $query->get( 'orderby' ) == 'Estoque Status' ) ) {
     // Get the order query variable - ASC or DESC
     $order = strtoupper( $query->get( 'order' ) );
-
     // Make sure the order setting qualifies. If not, set default as ASC
     if ( ! in_array( $order, array( 'ASC', 'DESC' ) ) )
       $order = 'ASC';
@@ -68,26 +59,20 @@ function manage_wp_posts_clauses( $stock_order, $query ) {
     }
     return $stock_order;
 }
-
 //Starts ordination in WooCommerce catalog
 function custom_woocommerce_get_catalog_ordering_args( $args ) {
   $orderby_value = isset( $_GET['orderby'] ) ? woocommerce_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
-
 	if ( 'stock' == $orderby_value ) {
 		$args['orderby'] = 'date';
 		$args['order'] = 'DESC';
 		$args['meta_key'] = '';
 	}
-
 	return $args;
 }
-
 add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_woocommerce_catalog_orderby' );
 add_filter( 'woocommerce_catalog_orderby', 'custom_woocommerce_catalog_orderby' );
-
 function custom_woocommerce_catalog_orderby( $sortby ) {
 	$sortby['stock'] = 'Estoque Status';
 	return $sortby;
 }
-
 add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_woocommerce_get_catalog_ordering_args' );
