@@ -11,8 +11,7 @@
  * Text Domain:       sort-stock-woo
  */
 
-/** 
- *Die
+/** Die
 */
 defined( 'ABSPATH' ) or die( 'Do not cheat!' );
 /**

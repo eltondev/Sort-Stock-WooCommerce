@@ -1,4 +1,4 @@
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+# Sort Stock WooCommerce
 
 'Sort Stock WooCommerce' um plugin simples. Ele faz uma coisa e apenas uma coisa: permite que você classificar por quantidade seu estoque.
 
