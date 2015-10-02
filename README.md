@@ -16,4 +16,6 @@ Se a classificação em ordem decrescente, irá fornecer o oposto , começando c
 
 == Changelog ==
 
-= 1.0.0 = This is the very first version.
+= 1.0.1 = Inserido filtro para que seja feito ordenação no catalogo.
+
+= 1.0.0 = Primeira versão.
