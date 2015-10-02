@@ -75,7 +75,7 @@ function custom_woocommerce_get_catalog_ordering_args( $args ) {
 
 	if ( 'stock' == $orderby_value ) {
 		$args['orderby'] = 'date';
-		$args['order'] = 'desc';
+		$args['order'] = 'DESC';
 		$args['meta_key'] = '';
 	}
 
