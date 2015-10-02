@@ -13,6 +13,7 @@ Se a classificação em ordem decrescente, irá fornecer o oposto , começando c
 1. Carregar a pasta 'sort-stock-woocommerce.zip' para o diretório /wp-content/plugins/`
 2. Ative o plugin através do menu 'Plugins' no WordPress
 3. Não existem opções. Basta ir para a página de produtos do painel, clique no cabeçalho da coluna 'Stock' , e você será capaz de classificar pela quantidade de estoque.
+4. Se prefeirir ordenar em seu catalogo bastar ir: WooCommerce/Configurações/Produtos/Exibição e escolher 'Estoque Status'. 
 
 == Changelog ==
 
