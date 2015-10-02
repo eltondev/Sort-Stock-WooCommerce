@@ -2,7 +2,7 @@
 
 'Sort Stock WooCommerce' um plugin simples. Ele faz uma coisa e apenas uma coisa: permite que você classificar por quantidade seu estoque.
 
-Após a ativação deste plugin, sua página do painel do produto WooCommerce lhe permitirá classificar produto pela quantidade de estoque. Basta clicar na coluna de administração 'Stock'.
+Após a ativação deste plugin, sua página do painel do produto WooCommerce lhe permitirá classificar produto pela quantidade de estoque. Basta clicar na coluna de administração 'Stock' e/ou WooCommerce/Configurações/Produtos/Exibição e escolher 'Estoque Status'.
 
 Se a classificação em ordem crescente, fora de estoque será mostrado em primeiro lugar, seguido por em estoque , mas inventário não conseguiu (nenhum número de quantidade de ações) e, finalmente, mostrando em estoque itens que têm um número quantidade de ações, começando com 1 e crescente.
 
