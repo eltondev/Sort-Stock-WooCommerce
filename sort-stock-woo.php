@@ -74,9 +74,9 @@ function custom_woocommerce_get_catalog_ordering_args( $args ) {
   $orderby_value = isset( $_GET['orderby'] ) ? woocommerce_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
 
 	if ( 'stock' == $orderby_value ) {
-		$args['orderby'] = 'meta_value';
-		$args['order'] = 'asc';
-		$args['meta_key'] = '_stock_status';
+		$args['orderby'] = 'date';
+		$args['order'] = 'desc';
+		$args['meta_key'] = '';
 	}
 
 	return $args;
